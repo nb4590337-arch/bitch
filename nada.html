@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Love Card 💋</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.card h1 {
+  color: red;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkred;
+}
+
+/* kisses */
+.kiss {
+  position: absolute;
+  font-size: 30px;
+  animation: float 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>💖 I love you baby  abedleghafour 💖</h1>
+  <button onclick="loveClick()">Click me 💋</button>
+</div>
+
+<script>
+function createKiss() {
+  const kiss = document.createElement("div");
+  kiss.classList.add("kiss");
+  kiss.innerHTML = "💋";
+  kiss.style.left = Math.random() * 100 + "vw";
+  kiss.style.animationDuration = (Math.random() * 3 + 4) + "s";
+  document.body.appendChild(kiss);
+
+  setTimeout(() => {
+    kiss.remove();
+  }, 7000);
+}
+
+setInterval(createKiss, 500);
+
+function loveClick() {
+  alert("Forever & always  mua7777777777💖💋");
+}
+</script>
+
+</body>
+</html>
